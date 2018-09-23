@@ -13,7 +13,7 @@ type Mapedit struct {
 	w     fyne.Window
 
 	// main layout
-	l, topbar, body, widgetbar, widgets, options, maparea, statusbar fyne.CanvasObject
+	L, Topbar, Body, Widgetbar, Widgets, Options, Maparea, Statusbar fyne.CanvasObject
 }
 
 // Quit exits the mapeditor
@@ -59,7 +59,7 @@ func NewMapedit(app fyne.App, title string) *Mapedit {
 	maparea.Layout = layout.NewFixedGridLayout(fyne.NewSize(100, 100))
 
 	body := fyne.NewContainer(
-		widgetbar, // TODO - want to lock the width of this column, but not sure how :(
+		widgetbar,
 		maparea,
 	)
 	body.Layout = layout.NewFixedGridLayout(fyne.NewSize(128, 200))
