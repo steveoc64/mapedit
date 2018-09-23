@@ -1,6 +1,11 @@
-all: build
+all: run
 
-build:
+test:
+	go vet ./...
+	golint ./...
+	go test ./...
+
+build: test
 	cd cmd && make
 
 run: build

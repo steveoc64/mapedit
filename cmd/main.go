@@ -7,7 +7,5 @@ import (
 
 func main() {
 	app := desktop.NewApp()
-	w := app.NewWindow("MapEditor")
-	w.SetContent(mapedit.NewMapedit())
-	w.Show()
+	mapedit.NewMapedit(app, "Map Editor Demo")
 }
